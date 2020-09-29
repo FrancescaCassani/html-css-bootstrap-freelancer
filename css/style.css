@@ -96,8 +96,33 @@ body {
 /* JUMBOTRON */
 .jumbotron {
   background: #1abc9c;
+  margin-top: -20px;
 }
 
+.img-circle {
+  width: 200px;
+}
+
+.jumbotron h1{
+  line-height: 80px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-size: 35px;
+  color: white;
+}
+
+.jumbotron hr {
+  border-top: 3px solid #FFF;
+}
+
+.jumbotron i {
+  margin-top: 12px;
+  transform: scale(2.5);
+}
+
+.jumbotron p {
+  margin-top: 40px;
+}
 /* ABOUT */
 .about {
   background: #1abc9c;
