@@ -13,31 +13,36 @@
 
     <!-- HEADER -->
     <header class="main-header">
-      <nav>
+      <nav class="navbar">
         <div class="container">
-          <div class="row">
-            <div class="barra-nav white-color">
-              <div class="col-xs-6 col-sm-6 col-lg-3">
-                <h1>Start Bootstrap</h1>
-              </div>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#main-menu"
+            aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 
-              <div class="barra-nav pull-right">
-                <ul class="text-inline">
-                  <ul class="menu col-xs-6 col-sm-3 hidden-md hidden-lg">
-                    <i class="fas fa-bars"></i>
-                  </ul>
-                  <li>
-                    <a class="white-color" href="#">Portfolio</a>
-                  </li>
-                  <li>
-                    <a class="white-color href="#">About</a>
-                  </li>
-                  <li>
-                    <a class="white-color href="#">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <!-- Nome azienda -->
+            <a class="navbar-brand" href="#">Start Bootstrap</a>
+          </div>
+
+          <!-- Elenco navbar -->
+          <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active">
+                <a href="#">Portfolio</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -73,7 +78,7 @@
             <h1 class="grey-color">Portfolio</h1>
             <div class="linea-stella">
               <div class="linea"></div>
-              <div class="stella"><!-- font awesome o immagine --></div>
+              <div class="stella"></div>
               <div class="linea"></div>
             </div>
           </div>
@@ -114,7 +119,7 @@
             <h1>About</h1>
             <div class="linea-stella">
               <div class="linea"></div>
-              <div class="stella"><!-- font awesome o immagine --></div>
+              <div class="stella"></div>
               <div class="linea"></div>
             </div>
           </div>
@@ -131,8 +136,11 @@
         </div>
 
         <div class="row">
-          <div class="col-xs-12">
-            <a class="white-color" href="#">Free Download</a>
+          <div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
+            <a class="btn btn-download icon-left" href="#">
+              <i class="fas fa-download"></i>
+              Free Download!
+             </a>
           </div>
         </div>
       </div>
@@ -147,7 +155,7 @@
             <h1>Contact me</h1>
             <div class="linea-stella">
               <div class="linea"></div>
-              <div class="stella"><!-- font awesome o immagine --></div>
+              <div class="stella"></div>
               <div class="linea"></div>
             </div>
           </div>
@@ -199,5 +207,11 @@
       </div>
 
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>
