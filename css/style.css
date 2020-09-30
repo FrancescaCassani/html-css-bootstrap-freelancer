@@ -1,183 +1,216 @@
 body {
-  font-family: 'Roboto Slab', serif;
+  padding-top: 90px; /*  90 perchè ho già messo 20 padding su .main-header .navbar */
+  font-family: 'Lato', sans-serif;
 }
 
-/* Utilities */
-.white-color {
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-green {
+  background: #1abc9c;
   color: white;
 }
 
-.grey-color {
-  color: #2c3e50;
+.mb-30 {
+  margin-bottom: 30px;
 }
 
-.light-grey-color {
-  color: #6c757d;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top:0;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+p {
+  font-size: 20px;
 }
 
 /* Buttons */
 .btn {
-  padding: 15px;
+  padding: 16px 25px;
+  font-size: 21px;
   border-color: transparent;
-  transition: background .4s;
+  border-radius: 7px;transition: background .4s;
+}
+.btn-primary {
+  background: #1abc9c;
+}
+.btn-primary:hover {
+  background: #3d8f7f;
 }
 
-.btn-download {
+.btn-ouline {
   color: white;
   border: 2px solid;
 }
-
-.btn-download:hover {
-  color: #2c3e50;
-  border-color: white;
+.btn-ouline:hover {
   background: white;
+  border-color: white;
 }
-
-.btn-download a {
-  color: white;
-}
-
 .btn.icon-left i {
-  padding-bottom: 9px;
-  margin-right: 15px;
-  font-size: 8px;
+  margin-right: 8px;
 }
 
 /* HEADER */
-/* Barra navigazione */
-/* Main header */
 .main-header .navbar {
+  margin-bottom: 0;
   background: #2c3e50;
-  border-radius: 0;
   border: none;
+  border-radius: 0;
+  padding: 20px 0;
+}
+
+.main-header .navbar-brand,
+.main-header .navbar-nav li a {
+  text-transform: uppercase;
+  color: white;
 }
 
 .main-header .navbar-brand {
-  height: 80px;
-  line-height: 80px;
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-size: 25px;
-  padding: 0 15px;
-  color: white;
+  font-size: 26px;
 }
 
-.main-header .navbar-right {
-  height: 80px;
-  line-height: 80px;
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-size: 18px;
-  padding: 0 15px;
-  color: white;
-}
-
-/* solo i li figli diretti e a figli diretti di li */
 .main-header .navbar-nav li a {
-  line-height: 80px;
-  padding: 0 15px;
-  padding: 0 15px;
-  color: white;
-  transition: background .4s;
+  font-size: 16px;
+  transition: color .4s;
 }
 
-.main-header .navbar-nav > li > a:hover {
-  background: #2c3e50;
+.main-header .navbar-nav li a:hover {
   color: #1abc9c;
 }
 
-.navbar .navbar-toggle {
-  margin-top: 20px;
+/* JUMBOTRON */
+.jumbotron-image {
+  max-width: 250px;
+  margin-bottom: 20px;
 }
-.navbar .navbar-toggle .icon-bar {
+
+.jumbotron h3 {
+  font-weight: 400;
+}
+
+/* DIVIDER */
+.star {
+  width: 300px;
+  max-width: 100%;
+  margin: 30px auto;   /* auto perchè elemento inline block */
+  text-align: center;
+}
+.star::before, /* creo la linea che si posizione prima e dopo l'icona */
+.star::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 4px;
+  border-radius: 2px;
   background: white;
 }
-
-
-/* JUMBOTRON */
-.jumbotron {
-  background: #1abc9c;
-  margin-top: -20px;
+.star i.fa-star {
+  display: inline-block;
+  width: 20%;
+  font-size: 30px;
+  vertical-align: middle;
 }
 
-.img-circle {
-  width: 200px;
+.star .star-blue::before,
+.star .star-blue::after {
+  background: #2c3e50;
 }
-
-.jumbotron h1{
-  line-height: 80px;
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-size: 35px;
-  color: white;
-}
-
-.jumbotron hr {
-  border-top: 3px solid #FFF;
-}
-
-.jumbotron i {
-  margin-top: 12px;
-  transform: scale(2.5);
-}
-
-.jumbotron p {
-  margin-top: 40px;
-}
-
-/* PORTFOLIO */
-.portfolio hr {
-  border-top: 3px solid #2c3e50;
-}
-
-.portfolio h1{
-  line-height: 80px;
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-size: 35px;
+.star .star-blue i.fa-star {
   color: #2c3e50;
 }
 
-.portfolio i {
-  margin-top: 12px;
-  transform: scale(2.5);
+/* PORTFOLIO */
+.portfolio-item {
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;   /* per nascondere ciò che è fuori */
 }
 
-.portfolio img {
-  height: 230px;
-  width: 330px;
-  margin: 40px;
-  border-radius: 5%;
+.portfolio-layover {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 188, 156, .7);
+  opacity: 0;
+  transition: opacity .4s;
 }
 
-.portfolio img:hover {
-  opacity: 0.2;
+.portfolio-layover i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  color: white;
 }
 
+.portfolio-item:hover .portfolio-layover {
+  opacity: 1;
+}
 
 /* ABOUT */
-.about {
-  background: #1abc9c;
+.about .left {
+  padding-right: 15px;
 }
 
-.about hr {
-  border-top: 3px solid #FFF;
+.about .right {
+  padding-left: 15px;
 }
 
-.about i {
-  margin-top: 12px;
-  transform: scale(2.5);
+/* CONTATCS */
+.contacts .form-group {
+  margin-bottom: 0;
 }
 
-.about p {
-  margin-top: 40px;
+.contacts input,
+.contacts textarea {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 24px;
+  color: #2c3e50;
 }
 
-.about .btn-download {
-  margin: 30px 0;
+.contacts input:focus,
+.contacts textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #2c3e50;
 }
 
-/* CONTACT ME */
-footer {
-  background: #2c3e50;
+.contacts input {
+  padding: 0;
+  height: 100px;
+  line-height: 100px;
+}
+
+.contacts textarea {
+  padding: 30px 0;
+  margin-bottom: 30px;
+  height: 250px;
+}
+
+.contacts ::placeholder {
+  color: #6c757d;
 }
