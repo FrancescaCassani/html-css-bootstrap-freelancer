@@ -104,14 +104,14 @@ p {
   font-weight: 400;
 }
 
-/* DIVIDER */
+/* STAR WHITE*/
 .star {
   width: 300px;
   max-width: 100%;
-  margin: 30px auto;   /* auto perchè elemento inline block */
+  margin: 30px auto;
   text-align: center;
 }
-.star::before, /* creo la linea che si posizione prima e dopo l'icona */
+.star::before,
 .star::after {
   content: "";
   display: inline-block;
@@ -127,6 +127,7 @@ p {
   vertical-align: middle;
 }
 
+/* Star blue */
 .star .star-blue::before,
 .star .star-blue::after {
   background: #2c3e50;
@@ -213,4 +214,76 @@ p {
 
 .contacts ::placeholder {
   color: #6c757d;
+}
+
+/* FOOTER */
+.main-footer {
+  color: white;
+}
+
+.main-footer .link-green {
+  color:#1abc9c;
+}
+.main-footer .link-green:hover {
+  color: #3d8f7f;
+}
+
+.footer-pre {
+  background: #2c3e50;
+  padding: 60px 0;
+}
+
+.footer-box .social a {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  line-height: 52px;
+  font-size: 20px;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+.footer-sub {
+  padding: 20px 0;
+  background: #1a252f;
+}
+
+.footer-sub p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* PIU' SMALL DEI TABLET */
+@media screen and (max-width: 767px) {
+  /* Layout */
+  section {
+    padding: 40px 0;
+  }
+
+  /* About */
+  .about .left {
+    padding-right: 0;
+  }
+  .about .right {
+    padding-left: 0;
+  }
+
+  /* Tipografia */
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+}
+
+/* PIU' SMALL DEI DESKTOP */
+@media screem and (max-width: 991px) {
+  .footer-sub {
+    margin-bottom: 30px;
+  }
 }
